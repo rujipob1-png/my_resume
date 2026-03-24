@@ -10,7 +10,7 @@ export const personalInfo = {
     "Full Stack Developer",
     "IT Student @ Kasetsart University",
   ],
-  email: "koonpoongame003@gmail.com",
+  email: "rujipob1@gmail.com",
   phone: "081-167-5573",
   location: "Thalingchan, Bangkok, Thailand",
   bio: "IT student passionate about frontend development and modern web technologies. Skilled in building responsive applications using modern frameworks and collaborating effectively in teams with a strong growth mindset.",
@@ -52,16 +52,23 @@ export const experiences = [
     title: "Full Stack Developer",
     company: "B2B Chinese Food Ingredient Supply Management System",
     date: "Sep 2025 – Present",
-    description:
-      "ออกแบบเว็บไซต์ที่ใช้งานง่ายตามความต้องการของอาจารย์ที่ปรึกษา พัฒนาฟีเจอร์ full-stack ได้แก่ ระบบสั่งซื้อออนไลน์, จองโต๊ะ real-time, ระบบชำระเงินหลายช่องทาง (PromptPay QR Code) และ admin dashboard พร้อมวิเคราะห์ยอดขาย",
+    points: [
+      "ออกแบบเว็บไซต์ที่ใช้งานง่ายตามความต้องการของอาจารย์ที่ปรึกษา",
+      "พัฒนาระบบสั่งซื้อออนไลน์และจองโต๊ะ real-time",
+      "สร้างระบบชำระเงินหลายช่องทาง รวมถึง PromptPay QR Code",
+      "พัฒนา Admin Dashboard พร้อมวิเคราะห์ยอดขาย",
+    ],
     tags: ["React", "Node.js", "Full Stack", "PromptPay"],
   },
   {
     title: "Frontend Developer",
     company: "IoT Environmental Monitoring System",
     date: "May 2025 – July 2025",
-    description:
-      "พัฒนา web dashboard สำหรับ monitor อุณหภูมิและความชื้นจาก IoT sensors แบบ real-time พร้อมระบบแจ้งเตือนผ่าน LINE Notify เมื่อค่าเกินเกณฑ์ที่กำหนด",
+    points: [
+      "พัฒนา Web Dashboard สำหรับ monitor อุณหภูมิและความชื้นจาก IoT sensors แบบ real-time",
+      "สร้างระบบแจ้งเตือนผ่าน LINE Notify เมื่อค่าเกินเกณฑ์ที่กำหนด",
+      "ออกแบบ UI/UX สำหรับแสดงผลข้อมูล sensor ในรูปแบบกราฟ",
+    ],
     tags: ["React", "IoT", "LINE Notify", "Dashboard"],
   },
 ];
@@ -86,10 +93,10 @@ export const projects = [
     title: "B2B Chinese Food Ingredient Supply Management System",
     description:
       "ระบบจัดการวัตถุดิบอาหารจีน B2B ที่มีฟีเจอร์สั่งซื้อออนไลน์, จองโต๊ะ real-time, ชำระเงินผ่าน PromptPay QR Code และ admin dashboard วิเคราะห์ยอดขาย",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image: "B2B.jpg",
     tags: ["React", "Node.js", "Full Stack", "PromptPay"],
     github: "https://github.com/",
-    demo: "",
+    demo: "https://spoon2-duojeng.vercel.app/",
     featured: true,
   },
   {

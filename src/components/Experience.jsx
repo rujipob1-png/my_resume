@@ -3,59 +3,66 @@ import { useInView } from "react-intersection-observer";
 import { FiBriefcase, FiBookOpen } from "react-icons/fi";
 import { experiences, education } from "../data";
 
-function TimelineCard({ data, index, icon, color }) {
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
-
+function CareerItem({ data, index, inView, isLast }) {
   return (
-    <div ref={ref} className="flex gap-4 sm:gap-8 mb-10 group">
-      {/* Left dot + line */}
-      <div className="flex flex-col items-center">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={inView ? { scale: 1 } : {}}
-          transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.2 }}
-          className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg shrink-0 text-white z-10 ${color}`}
-        >
-          {icon}
-        </motion.div>
-        <div className="w-0.5 flex-1 bg-gradient-to-b from-dark-600 to-transparent mt-2" />
-      </div>
-
-      {/* Card */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="flex-1 pb-2"
-      >
-        <div className="tilt-card rounded-2xl p-6 group-hover:border-primary-500/30">
-          <span className="inline-block text-[12px] font-mono text-primary-400 bg-primary-500/10 px-3 py-1.5 rounded-full border border-primary-500/15 mb-3 tracking-wide">
-            {data.date}
-          </span>
-          <h3 className="text-lg font-bold text-white group-hover:text-primary-400 transition-colors font-heading">
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.1 * index, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      className={`py-5 ${!isLast ? "border-b border-dark-600/30" : ""}`}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <h3 className="text-[15px] font-bold text-white font-heading leading-snug">
             {data.title || data.degree}
           </h3>
-          <p className="text-primary-400/70 font-medium text-[13px] mt-1 tracking-wide">
+          <p className="text-sm text-dark-400 mt-0.5">
             {data.company || data.school}
           </p>
-          <p className="text-dark-300/70 text-sm mt-3 leading-relaxed">
-            {data.description}
-          </p>
-          {data.tags && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {data.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-2.5 py-1 rounded-full bg-dark-800/60 text-primary-300 border border-dark-700/50"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+          {data.points && (
+            <p className="text-xs text-dark-400/80 mt-1 line-clamp-1">
+              {data.points.join(" • ")}
+            </p>
+          )}
+          {!data.points && data.description && (
+            <p className="text-xs text-dark-400/80 mt-1">{data.description}</p>
           )}
         </div>
-      </motion.div>
-    </div>
+        <span className="text-xs text-accent-400 font-mono whitespace-nowrap shrink-0 mt-0.5">
+          {data.date}
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
+function SectionCard({ title, icon, items, inView, indexOffset }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.1 * indexOffset, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="rounded-2xl bg-dark-800/50 border border-dark-600/30 p-6 sm:p-7"
+    >
+      {/* Card header */}
+      <div className="flex items-center gap-2.5 mb-1">
+        {icon}
+        <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-dark-400">{title}</h3>
+      </div>
+
+      {/* Items */}
+      <div>
+        {items.map((item, i) => (
+          <CareerItem
+            key={i}
+            data={item}
+            index={indexOffset + i}
+            inView={inView}
+            isLast={i === items.length - 1}
+          />
+        ))}
+      </div>
+    </motion.div>
   );
 }
 
@@ -63,40 +70,43 @@ export default function Experience() {
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
-    <section id="experience" className="section-wrapper py-28 px-6">
-      <div ref={ref} className="max-w-3xl mx-auto">
+    <section id="experience" className="section-wrapper py-28 px-6 sm:px-10">
+      <div ref={ref} className="max-w-4xl mx-auto">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          className="mb-16"
+          className="mb-12"
         >
-          <p className="section-subtext">What I have done so far</p>
-          <h2 className="section-headtext mt-2">
-            เส้นทาง<span className="gradient-text"> อาชีพ </span>
+          <p className="section-subtext mb-3">About Education</p>
+          <h2 className="section-headtext">
+            MY EDUCATION<span className="gradient-text"> & EXPERIENCE</span>
           </h2>
         </motion.div>
 
-        {/* Timeline */}
-        <div>
-          {experiences.map((exp, i) => (
-            <TimelineCard
-              key={i}
-              data={exp}
-              index={i}
-              icon={<FiBriefcase className="w-5 h-5" />}
-              color="violet-gradient"
+        {/* Cards grid */}
+        <div className="grid gap-6 lg:grid-cols-5">
+          {/* Career path — takes more space */}
+          <div className="lg:col-span-3">
+            <SectionCard
+              title="Career Path"
+              icon={<FiBriefcase className="w-3.5 h-3.5 text-dark-400" />}
+              items={experiences}
+              inView={inView}
+              indexOffset={0}
             />
-          ))}
-          {education.map((edu, i) => (
-            <TimelineCard
-              key={`edu-${i}`}
-              data={edu}
-              index={experiences.length + i}
-              icon={<FiBookOpen className="w-5 h-5" />}
-              color="green-pink-gradient"
+          </div>
+
+          {/* Education */}
+          <div className="lg:col-span-2">
+            <SectionCard
+              title="Education"
+              icon={<FiBookOpen className="w-3.5 h-3.5 text-dark-400" />}
+              items={education}
+              inView={inView}
+              indexOffset={experiences.length}
             />
-          ))}
+          </div>
         </div>
       </div>
     </section>

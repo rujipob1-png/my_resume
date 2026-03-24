@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-700/40 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/15 outline-none transition-all text-white placeholder:text-dark-500 text-[15px]";
+    "w-full px-4 py-3 rounded-xl bg-dark-900/80 border border-dark-600/40 focus:border-dark-400 focus:ring-2 focus:ring-dark-500/15 outline-none transition-all text-white placeholder:text-dark-500 text-[15px]";
 
   return (
     <section id="contact" className="section-wrapper py-28 px-6">
@@ -73,13 +73,13 @@ export default function Contact() {
                 transition={{ delay: 0.2 + i * 0.1 }}
                 className="flex items-start gap-4 group"
               >
-                <span className="w-12 h-12 rounded-xl bg-dark-800/60 text-primary-400 flex items-center justify-center shrink-0 group-hover:violet-gradient group-hover:text-white transition-all border border-dark-700/30">
+                <span className="w-12 h-12 rounded-xl bg-dark-800/70 text-dark-300 flex items-center justify-center shrink-0 group-hover:bg-dark-700 group-hover:text-white transition-all border border-dark-600/30">
                   {c.icon}
                 </span>
                 <div>
                   <p className="text-[11px] text-dark-500 uppercase tracking-[0.15em]">{c.label}</p>
                   {c.href ? (
-                    <a href={c.href} className="font-medium text-white hover:text-primary-400 transition-colors text-[15px]">
+                    <a href={c.href} className="font-medium text-white hover:text-dark-300 transition-colors text-[15px]">
                       {c.value}
                     </a>
                   ) : (
@@ -105,7 +105,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="p-3 rounded-xl bg-dark-800/40 hover:bg-primary-500 text-dark-400 hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 border border-dark-700/30"
+                    className="p-3 rounded-xl bg-dark-800/50 hover:bg-dark-700 text-dark-400 hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 border border-dark-600/30"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -120,7 +120,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 p-8 rounded-2xl bg-dark-800/50 border border-dark-700/40"
+            className="lg:col-span-3 p-8 rounded-2xl bg-dark-800/60 border border-dark-600/30"
           >
             <div className="grid sm:grid-cols-2 gap-5 mb-5">
               <div>
@@ -188,7 +188,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={sending}
-              className="w-full py-3.5 rounded-xl animated-gradient text-white font-semibold shadow-lg shadow-primary-500/25 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3.5 rounded-xl bg-white text-dark-950 font-semibold shadow-lg shadow-black/10 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {sending ? (
                 <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

@@ -12,14 +12,6 @@ import SmoothScroll from "./components/SmoothScroll";
 
 const StarsCanvas = lazy(() => import("./components/StarsCanvas"));
 
-function SectionDivider() {
-  return (
-    <div className="flex items-center justify-center py-10">
-      <div className="section-divider" />
-    </div>
-  );
-}
-
 export default function App() {
   const glowRef = useRef(null);
   const progressRef = useRef(null);
@@ -59,15 +51,10 @@ export default function App() {
         <div className="relative z-10">
           <Navbar />
           <Hero />
-          <SectionDivider />
           <About />
-          <SectionDivider />
           <Skills />
-          <SectionDivider />
           <Experience />
-          <SectionDivider />
           <Projects />
-          <SectionDivider />
           <Contact />
           <Footer />
         </div>
