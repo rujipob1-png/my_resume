@@ -75,7 +75,7 @@ export const experiences = [
 
 export const education = [
   {
-    degree: "ศิลปศาสตรบัณฑิต สาขาเทคโนโลยีสารสนเทศ (Bachelor of Liberal Arts Science in Information Technology)",
+    degree: "คณะศิลปศาสตร์และวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ (Bachelor of Liberal Arts Science in Information Technology)",
     school: "มหาวิทยาลัยเกษตรศาสตร์ (Kasetsart University)",
     date: "2022 – Present",
     description: "GPA 3.02",

@@ -50,7 +50,7 @@ export default function Contact() {
         >
           <p className="section-subtext">Get in touch</p>
           <h2 className="section-headtext mt-2">
-            มา<span className="gradient-text"> พูดคุย </span>กัน
+            LET'S<span className="gradient-text"> WORK </span> TOGETHER
           </h2>
           <p className="text-dark-300/70 mt-4 max-w-lg text-[15px]">
             สนใจจะร่วมงานหรือมีคำถามอะไร ส่งข้อความมาได้เลยครับ!

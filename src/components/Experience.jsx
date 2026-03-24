@@ -9,29 +9,44 @@ function CareerItem({ data, index, inView, isLast }) {
       initial={{ opacity: 0, y: 16 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.1 * index, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className={`py-5 ${!isLast ? "border-b border-dark-600/30" : ""}`}
+      className={`py-6 ${!isLast ? "border-b border-dark-600/30" : ""}`}
     >
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <h3 className="text-[15px] font-bold text-white font-heading leading-snug">
-            {data.title || data.degree}
-          </h3>
-          <p className="text-sm text-dark-400 mt-0.5">
-            {data.company || data.school}
-          </p>
-          {data.points && (
-            <p className="text-xs text-dark-400/80 mt-1 line-clamp-1">
-              {data.points.join(" • ")}
-            </p>
-          )}
-          {!data.points && data.description && (
-            <p className="text-xs text-dark-400/80 mt-1">{data.description}</p>
-          )}
+      {/* Date */}
+      <span className="inline-block text-xs text-accent-400 font-mono mb-2">
+        {data.date}
+      </span>
+
+      {/* Title & company */}
+      <h3 className="text-base font-bold text-white font-heading leading-snug">
+        {data.title || data.degree}
+      </h3>
+      <p className="text-sm text-dark-400 mt-1">
+        {data.company || data.school}
+      </p>
+
+      {/* Summary line */}
+      {data.points && (
+        <p className="text-xs text-dark-400/80 mt-2 line-clamp-2 leading-relaxed">
+          {data.points.join(" • ")}
+        </p>
+      )}
+      {!data.points && data.description && (
+        <p className="text-xs text-dark-400/80 mt-2 leading-relaxed">{data.description}</p>
+      )}
+
+      {/* Tags */}
+      {data.tags && (
+        <div className="flex flex-wrap gap-1.5 mt-3">
+          {data.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[10px] px-2 py-0.5 rounded-full bg-dark-700/40 text-dark-300 border border-dark-600/20"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
-        <span className="text-xs text-accent-400 font-mono whitespace-nowrap shrink-0 mt-0.5">
-          {data.date}
-        </span>
-      </div>
+      )}
     </motion.div>
   );
 }
@@ -42,7 +57,7 @@ function SectionCard({ title, icon, items, inView, indexOffset }) {
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.1 * indexOffset, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="rounded-2xl bg-dark-800/50 border border-dark-600/30 p-6 sm:p-7"
+      className="rounded-2xl bg-dark-800/50 border border-dark-600/30 p-7 sm:p-8"
     >
       {/* Card header */}
       <div className="flex items-center gap-2.5 mb-1">
@@ -71,7 +86,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="section-wrapper py-28 px-6 sm:px-10">
-      <div ref={ref} className="max-w-4xl mx-auto">
+      <div ref={ref} className="max-w-5xl mx-auto">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -85,9 +100,9 @@ export default function Experience() {
         </motion.div>
 
         {/* Cards grid */}
-        <div className="grid gap-6 lg:grid-cols-5">
-          {/* Career path — takes more space */}
-          <div className="lg:col-span-3">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Career path */}
+          <div>
             <SectionCard
               title="Career Path"
               icon={<FiBriefcase className="w-3.5 h-3.5 text-dark-400" />}
@@ -98,7 +113,7 @@ export default function Experience() {
           </div>
 
           {/* Education */}
-          <div className="lg:col-span-2">
+          <div>
             <SectionCard
               title="Education"
               icon={<FiBookOpen className="w-3.5 h-3.5 text-dark-400" />}
