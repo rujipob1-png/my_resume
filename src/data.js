@@ -141,7 +141,7 @@ export const projects = [
   {
     title: "FOOTBALL FIELD BOOKING",
     description:
-      "A football field booking system where users can reserve football fields online, view availability, and manage bookings.",
+      "A football field booking web application developed during my second year as part of an academic project. Built using HTML and CSS, the system allows users to browse available football fields, make reservations, and complete payments online. It also includes an admin panel for managing bookings, monitoring user reservations, and handling system data efficiently.",
     image: "FOOTBALL.jpg",
     tags: ["HTML", " CSS"],
     github: "https://github.com/rujipob1-png/ERP",
