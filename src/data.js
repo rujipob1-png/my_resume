@@ -148,4 +148,14 @@ export const projects = [
     demo: "https://erp-murex-theta.vercel.app/homepage.html",
     featured: false,
   },
+  {
+    title: "VENDING MACHINE",
+    description:
+      "A vending machine simulation project developed during my first year (second semester) as part of an academic assignment. The system simulates a detergent vending machine where users can insert money and select products to purchase. Built using HTML, CSS, and JavaScript, the project focuses on basic user interaction, product selection, and simple transaction logic.",
+    image: "VENDING_MACHINE.jpg",
+    tags: ["HTML", " CSS", "JS"],
+    github: "https://github.com/rujipob1-png/vending-machine",
+    demo: "https://vending-machine-flax.vercel.app/",
+    featured: false,
+  },
 ];
