@@ -138,4 +138,14 @@ export const projects = [
     demo: "https://game-24-three.vercel.app/",
     featured: false,
   },
+  {
+    title: "FOOTBALL FIELD BOOKING",
+    description:
+      "A football field booking system where users can reserve football fields online, view availability, and manage bookings.",
+    image: "FOOTBALL.jpg",
+    tags: ["HTML", " CSS"],
+    github: "https://github.com/rujipob1-png/ERP",
+    demo: "https://erp-murex-theta.vercel.app/homepage.html",
+    featured: false,
+  },
 ];
