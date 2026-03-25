@@ -28,8 +28,8 @@ export const aboutData = {
     "นักศึกษา IT ที่มหาวิทยาลัยเกษตรศาสตร์ มีความหลงใหลในการพัฒนา Frontend และเทคโนโลยีเว็บสมัยใหม่ สามารถสร้างแอปพลิเคชันที่ responsive ด้วย framework ยุคใหม่ และทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ พร้อมเติบโตและเรียนรู้สิ่งใหม่ๆ อยู่เสมอ",
   highlights: [
     { label: "GPA", value: "3.02" },
-    { label: "โปรเจกต์", value: "2+" },
-    { label: "ทักษะ", value: "8+" },
+    { label: "โปรเจกต์", value: "3+" },
+    { label: "ทักษะ", value: "10+" },
     { label: "ภาษา", value: "TH/EN" },
   ],
 };
@@ -44,19 +44,29 @@ export const skills = [
   { name: "Git", level: 80, category: "Tools" },
   { name: "GitHub", level: 80, category: "Tools" },
   { name: "Figma", level: 70, category: "Tools" },
-  { name: "VS Code", level: 90, category: "Tools" },
+  { name: "Postman", level: 75, category: "Tools" },
 ];
 
 export const experiences = [
   {
     title: "Full Stack Developer",
-    company: "B2B Chinese Food Ingredient Supply Management System",
-    date: "Sep 2025 – Present",
+    company: "Electronic Leave Management System — Government Internship",
+    date: "Jan 2026 – Present",
     points: [
-      "ออกแบบเว็บไซต์ที่ใช้งานง่ายตามความต้องการของอาจารย์ที่ปรึกษา",
-      "พัฒนาระบบสั่งซื้อออนไลน์และจองโต๊ะ real-time",
-      "สร้างระบบชำระเงินหลายช่องทาง รวมถึง PromptPay QR Code",
-      "พัฒนา Admin Dashboard พร้อมวิเคราะห์ยอดขาย",
+      "Developed a full-stack leave management system with multi-level approval workflow and role-based access control",
+      "Implemented real-time request tracking, notifications, and reporting dashboard",
+      "Designed system to support real-world organizational workflows and approval processes",
+    ],
+    tags: ["React", "Node.js", "Full Stack", "RBAC"],
+  },
+  {
+    title: "Full Stack Developer",
+    company: "B2B Chinese Food Ingredient Supply Management System",
+    date: "Sep 2025 – Nov 2025",
+    points: [
+      "Developed a full-stack B2B platform with online ordering, real-time booking, and PromptPay QR payment integration",
+      "Built admin dashboard for order management and sales analytics",
+      "Improved user experience by aligning system design with real business requirements",
     ],
     tags: ["React", "Node.js", "Full Stack", "PromptPay"],
   },
@@ -65,9 +75,8 @@ export const experiences = [
     company: "IoT Environmental Monitoring System",
     date: "May 2025 – July 2025",
     points: [
-      "พัฒนา Web Dashboard สำหรับ monitor อุณหภูมิและความชื้นจาก IoT sensors แบบ real-time",
-      "สร้างระบบแจ้งเตือนผ่าน LINE Notify เมื่อค่าเกินเกณฑ์ที่กำหนด",
-      "ออกแบบ UI/UX สำหรับแสดงผลข้อมูล sensor ในรูปแบบกราฟ",
+      "Developed a web dashboard for monitoring real-time temperature and humidity data from IoT sensors",
+      "Implemented alert system integrated with LINE Notify for abnormal condition notifications",
     ],
     tags: ["React", "IoT", "LINE Notify", "Dashboard"],
   },
@@ -90,9 +99,19 @@ export const education = [
 
 export const projects = [
   {
+    title: "Electronic Leave Management System",
+    description:
+      "Full-stack leave management system with multi-level approval workflow, role-based access control, real-time request tracking, notifications and reporting dashboard — developed for a government organization during internship",
+    image: "E_leave.jpg",
+    tags: ["React", "Node.js", "Full Stack", "RBAC"],
+    github: "",
+    demo: "",
+    featured: true,
+  },
+  {
     title: "B2B Chinese Food Ingredient Supply Management System",
     description:
-      "ระบบจัดการวัตถุดิบอาหารจีน B2B ที่มีฟีเจอร์สั่งซื้อออนไลน์, จองโต๊ะ real-time, ชำระเงินผ่าน PromptPay QR Code และ admin dashboard วิเคราะห์ยอดขาย",
+      "Full-stack B2B platform with online ordering, real-time table booking, PromptPay QR payment integration and admin dashboard for order management and sales analytics",
     image: "B2B.jpg",
     tags: ["React", "Node.js", "Full Stack", "PromptPay"],
     github: "https://github.com/",
@@ -102,21 +121,21 @@ export const projects = [
   {
     title: "IoT Environmental Monitoring System",
     description:
-      "Web dashboard สำหรับ monitor อุณหภูมิและความชื้นจาก IoT sensors แบบ real-time พร้อมระบบแจ้งเตือนผ่าน LINE Notify เมื่อค่าเกินเกณฑ์ที่กำหนด",
-    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&h=400&fit=crop",
+      "Web dashboard for monitoring real-time temperature and humidity data from IoT sensors with LINE Notify alert system for abnormal condition notifications",
+    image: "IoT.jpg",
     tags: ["React", "IoT", "LINE Notify", "Dashboard"],
     github: "https://github.com/",
     demo: "",
     featured: true,
   },
   {
-    title: "Portfolio Website",
+    title: "GAME 24",
     description:
-      "เว็บไซต์ Portfolio ส่วนตัว พร้อม 3D animation, dark mode, smooth scrolling และ responsive design สร้างด้วย React + Three.js",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    tags: ["React", "Three.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/",
-    demo: "",
+      "A number puzzle game where players combine randomly generated numbers using addition, subtraction, multiplication, and division to reach a total of 24.",
+    image: "game24.jpg",
+    tags: ["HTML", " CSS", "JS"],
+    github: "https://github.com/rujipob1-png/game_24",
+    demo: "https://game-24-three.vercel.app/",
     featured: false,
   },
 ];

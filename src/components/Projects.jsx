@@ -40,7 +40,7 @@ export default function Projects() {
                 className="group grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-dark-900/60 border border-dark-700/30 hover:border-dark-600/50 transition-all"
               >
                 {/* Image */}
-                <div className={`relative h-64 md:h-auto overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                <div className={`relative h-64 md:h-80 overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
                   <img
                     src={project.image}
                     alt={project.title}

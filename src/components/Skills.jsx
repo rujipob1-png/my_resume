@@ -4,7 +4,7 @@ import { skills } from "../data";
 import {
   SiReact, SiJavascript, SiTypescript, SiHtml5, SiTailwindcss, SiNextdotjs,
   SiNodedotjs, SiExpress, SiPython, SiMongodb, SiPostgresql, SiFirebase,
-  SiGit, SiDocker, SiFigma, SiGithub,
+  SiGit, SiDocker, SiFigma, SiGithub, SiPostman,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 
@@ -25,6 +25,7 @@ const iconMap = {
   "GitHub": SiGithub,
   "Docker": SiDocker,
   "Figma": SiFigma,
+  "Postman": SiPostman,
   "VS Code": VscCode,
 };
 

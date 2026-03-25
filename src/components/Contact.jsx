@@ -48,9 +48,9 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           className="mb-16"
         >
-          <p className="section-subtext">Get in touch</p>
+          <p className="section-subtext">Contact Me</p>
           <h2 className="section-headtext mt-2">
-            LET'S<span className="gradient-text"> WORK </span> TOGETHER
+            GET IN<span className="gradient-text"> TOUCH</span>
           </h2>
           <p className="text-dark-300/70 mt-4 max-w-lg text-[15px]">
             สนใจจะร่วมงานหรือมีคำถามอะไร ส่งข้อความมาได้เลยครับ!
