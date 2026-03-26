@@ -12,8 +12,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-dark-500 text-[13px] flex items-center gap-1 tracking-wide"
         >
-          © {new Date().getFullYear()} {personalInfo.nameEn}. Made with{" "}
-          <FaHeart className="text-red-500 w-3 h-3" /> and React
+          © {new Date().getFullYear()} {personalInfo.nameEn}. 
         </motion.p>
 
         <motion.div
