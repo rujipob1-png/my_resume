@@ -4,7 +4,8 @@ import { skills } from "../data";
 import {
   SiReact, SiJavascript, SiTypescript, SiHtml5, SiTailwindcss, SiNextdotjs,
   SiNodedotjs, SiExpress, SiPython, SiMongodb, SiPostgresql, SiFirebase,
-  SiGit, SiDocker, SiFigma, SiGithub, SiPostman,
+  SiGit, SiDocker, SiFigma, SiGithub, SiPostman, SiMysql, SiSupabase,
+  SiJsonwebtokens,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 
@@ -19,7 +20,10 @@ const iconMap = {
   "Express.js": SiExpress,
   "Python": SiPython,
   "MongoDB": SiMongodb,
+  "MySQL": SiMysql,
   "PostgreSQL": SiPostgresql,
+  "Supabase": SiSupabase,
+  "JWT / RBAC": SiJsonwebtokens,
   "Firebase": SiFirebase,
   "Git": SiGit,
   "GitHub": SiGithub,

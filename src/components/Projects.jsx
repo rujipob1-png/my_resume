@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiArrowRight, FiFileText } from "react-icons/fi";
 import { projects } from "../data";
 
 export default function Projects() {
@@ -88,6 +88,16 @@ export default function Projects() {
                         className="inline-flex items-center gap-2 text-sm text-white font-medium group/link"
                       >
                         Live Demo
+                        <FiArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                      </a>
+                    )}
+                    {project.docs && (
+                      <a
+                        href={project.docs}
+                        download
+                        className="inline-flex items-center gap-2 text-sm text-white font-medium group/link"
+                      >
+                        <FiFileText className="w-4 h-4" /> Manual
                         <FiArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                       </a>
                     )}
