@@ -188,7 +188,7 @@ export default function Projects() {
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-8 py-3 rounded-full border border-dark-600/50 text-dark-400 hover:text-white hover:border-dark-400 font-medium text-sm transition-all hover:scale-105 active:scale-95"
+              className="px-8 py-3 rounded-full border border-accent-400/60 text-accent-400 hover:bg-accent-400 hover:text-dark-950 font-medium text-sm transition-all hover:scale-105 active:scale-95"
             >
               {showAll ? "Show Less" : `View All Projects (${projects.length})`}
             </button>
