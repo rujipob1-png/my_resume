@@ -9,7 +9,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pb-24">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-24">
       {/* Ambient glow — left */}
       <div className="hero-glow hero-glow-left" />
       {/* Ambient glow — right */}
