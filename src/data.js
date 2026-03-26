@@ -11,7 +11,7 @@ export const personalInfo = {
     "IT Student @ Kasetsart University",
   ],
   email: "rujipob1@gmail.com",
-  phone: "081-167-5573",
+  phone: "+66 81-167-5573",
   location: "Thalingchan, Bangkok, Thailand",
   bio: "IT student passionate about frontend development and modern web technologies. Skilled in building responsive applications using modern frameworks and collaborating effectively in teams with a strong growth mindset.",
   resumeUrl: "/Resume.pdf",

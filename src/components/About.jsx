@@ -87,16 +87,27 @@ export default function About() {
               <p className="text-sm font-medium text-white">Available for work</p>
             </div>
 
-            {/* Download CV */}
-            <a
-              href={personalInfo.resumeUrl}
-              className="flex items-center justify-center gap-2 rounded-xl bg-dark-700/40 border border-dark-600/20 py-3 hover:bg-dark-700/70 transition-all group cursor-pointer"
-            >
-              <FiDownload className="w-4 h-4 text-white group-hover:text-accent-400 transition-colors" />
-              <span className="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors">
-                Download CV
-              </span>
-            </a>
+            {/* Download buttons */}
+            <div className="flex gap-2">
+              <a
+                href={personalInfo.resumeUrl}
+                className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-dark-700/40 border border-dark-600/20 py-3 hover:bg-dark-700/70 transition-all group cursor-pointer"
+              >
+                <FiDownload className="w-4 h-4 text-white group-hover:text-accent-400 transition-colors" />
+                <span className="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors">
+                  CV
+                </span>
+              </a>
+              <a
+                href="/Transcript.pdf"
+                className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-dark-700/40 border border-dark-600/20 py-3 hover:bg-dark-700/70 transition-all group cursor-pointer"
+              >
+                <FiDownload className="w-4 h-4 text-white group-hover:text-accent-400 transition-colors" />
+                <span className="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors">
+                  Transcript
+                </span>
+              </a>
+            </div>
           </motion.div>
         </div>
 

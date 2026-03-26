@@ -27,7 +27,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
           >
-            <p className="section-subtext mb-3">Portfolio</p>
+            <p className="section-subtext mb-3">PROJECTS</p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-[1.1]">
               <span className="gradient-text">MY</span>
               {" "}
