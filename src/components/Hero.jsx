@@ -23,7 +23,7 @@ export default function Hero() {
         {/* Name label */}
         <motion.p
           variants={fadeUp(0)}
-          className="text-dark-400 text-xs sm:text-sm tracking-[0.3em] uppercase font-mono mb-8"
+          className="text-dark-200 text-xs sm:text-sm tracking-[0.3em] uppercase font-mono mb-8"
         >
           {personalInfo.nameEn}
         </motion.p>
@@ -47,7 +47,7 @@ export default function Hero() {
         {/* Bio */}
         <motion.p
           variants={fadeUp(0.36)}
-          className="text-dark-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed"
+          className="text-dark-200 text-sm sm:text-base max-w-xl mx-auto leading-relaxed"
         >
           {personalInfo.bio}
         </motion.p>
@@ -62,7 +62,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-7 py-3 rounded-full border border-dark-500/50 text-dark-300 text-sm font-medium hover:border-dark-300 hover:text-white transition-all"
+            className="px-7 py-3 rounded-full border border-dark-500/50 text-dark-100 text-sm font-medium hover:border-dark-300 hover:text-white transition-all"
           >
             Contact Me
           </a>
@@ -75,7 +75,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-dark-500 z-10 flex flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-dark-300 z-10 flex flex-col items-center gap-2"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase font-mono">Scroll</span>
         <motion.span

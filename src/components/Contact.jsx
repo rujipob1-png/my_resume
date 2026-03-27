@@ -36,7 +36,7 @@ export default function Contact() {
           variants={fadeUp(0.16)}
           initial="hidden"
           animate={anim}
-          className="text-dark-400 text-lg sm:text-xl mt-6 max-w-xl mx-auto leading-relaxed"
+          className="text-dark-200 text-lg sm:text-xl mt-6 max-w-xl mx-auto leading-relaxed"
         >
           Feel free to reach out if you’d like to collaborate or just say hi. I’m always open to new ideas, opportunities, and interesting projects.
         </motion.p>
@@ -50,13 +50,13 @@ export default function Contact() {
         >
           <span className="inline-flex items-center gap-2.5">
             <FiMail className="w-5 h-5 text-accent-400" />
-            <a href={`mailto:${personalInfo.email}`} className="text-base sm:text-lg text-dark-300 hover:text-white transition-colors">
+            <a href={`mailto:${personalInfo.email}`} className="text-base sm:text-lg text-dark-100 hover:text-white transition-colors">
               {personalInfo.email}
             </a>
           </span>
           <span className="inline-flex items-center gap-2.5">
             <FiPhone className="w-5 h-5 text-accent-400" />
-            <a href={`tel:${personalInfo.phone}`} className="text-base sm:text-lg text-dark-300 hover:text-white transition-colors">
+            <a href={`tel:${personalInfo.phone}`} className="text-base sm:text-lg text-dark-100 hover:text-white transition-colors">
               {personalInfo.phone}
             </a>
           </span>

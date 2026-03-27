@@ -42,16 +42,16 @@ export default function Projects() {
             transition={{ delay: 0.3 }}
             className="hidden sm:flex items-center gap-3"
           >
-            <span className="text-xs text-dark-500 font-mono uppercase tracking-wider">Scroll</span>
+            <span className="text-xs text-dark-300 font-mono uppercase tracking-wider">Scroll</span>
             <button
               onClick={() => scroll("left")}
-              className="w-10 h-10 rounded-full border border-dark-600/50 text-dark-400 hover:text-accent-400 hover:border-accent-400/50 flex items-center justify-center transition-all"
+              className="w-10 h-10 rounded-full border border-dark-600/50 text-dark-200 hover:text-accent-400 hover:border-accent-400/50 flex items-center justify-center transition-all"
             >
               <FiChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-10 h-10 rounded-full border border-dark-600/50 text-dark-400 hover:text-accent-400 hover:border-accent-400/50 flex items-center justify-center transition-all"
+              className="w-10 h-10 rounded-full border border-dark-600/50 text-dark-200 hover:text-accent-400 hover:border-accent-400/50 flex items-center justify-center transition-all"
             >
               <FiChevronRight className="w-5 h-5" />
             </button>
@@ -93,7 +93,7 @@ export default function Projects() {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-dark-700/50 text-dark-300 border border-dark-600/30">
+                    <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-dark-700/50 text-dark-100 border border-dark-600/30">
                       {tag}
                     </span>
                   ))}
@@ -105,14 +105,14 @@ export default function Projects() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-dark-400 line-clamp-2 leading-relaxed mb-5">
+                <p className="text-sm text-dark-200 line-clamp-2 leading-relaxed mb-5">
                   {project.description}
                 </p>
 
                 {/* Links */}
                 <div className="flex items-center gap-5 pt-4 border-t border-dark-600/20">
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-dark-400 hover:text-accent-400 transition-colors">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-dark-200 hover:text-accent-400 transition-colors">
                       <FiGithub className="w-4 h-4" /> Source
                     </a>
                   )}
@@ -155,14 +155,14 @@ export default function Projects() {
                   <div className="p-5">
                     <div className="flex flex-wrap gap-1.5 mb-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-dark-700/40 text-dark-400 border border-dark-600/20">{tag}</span>
+                        <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-dark-700/40 text-dark-200 border border-dark-600/20">{tag}</span>
                       ))}
                     </div>
                     <h3 className="text-base font-bold text-white font-heading mb-1">{project.title}</h3>
-                    <p className="text-xs text-dark-400 line-clamp-2 leading-relaxed mb-3">{project.description}</p>
+                    <p className="text-xs text-dark-200 line-clamp-2 leading-relaxed mb-3">{project.description}</p>
                     <div className="flex items-center gap-4">
                       {project.github && (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-dark-400 hover:text-white transition-colors">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-dark-200 hover:text-white transition-colors">
                           <FiGithub className="w-3.5 h-3.5" /> Source
                         </a>
                       )}

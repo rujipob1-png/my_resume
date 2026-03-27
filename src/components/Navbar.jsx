@@ -50,7 +50,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
         {/* Logo / Initials */}
         <a href="#home" className="text-white font-heading font-bold text-lg tracking-tight">
-          {initials}<span className="text-dark-500">.</span>
+          {initials}<span className="text-dark-300">.</span>
         </a>
 
         {/* Desktop links */}
@@ -60,7 +60,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`relative text-sm font-medium transition-colors duration-200 ${
-                active === link.href ? "text-white" : "text-dark-500 hover:text-dark-300"
+                active === link.href ? "text-white" : "text-dark-300 hover:text-dark-100"
               }`}
             >
               {link.name}
@@ -102,7 +102,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`text-sm py-2 transition-colors ${
-                  active === link.href ? "text-white" : "text-dark-500"
+                  active === link.href ? "text-white" : "text-dark-300"
                 }`}
               >
                 {link.name}

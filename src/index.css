@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--color-dark-400);
+  color: var(--color-accent-400);
   font-weight: 500;
 }
 

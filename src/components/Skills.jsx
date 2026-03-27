@@ -91,7 +91,7 @@ export default function Skills() {
                 return (
                   <div key={i} className="flex items-center gap-3 px-8 shrink-0">
                     {Icon && <Icon className="w-6 h-6" style={{ color: color || undefined, opacity: 0.5 }} />}
-                    <span className="text-2xl font-heading font-bold text-dark-600 whitespace-nowrap">
+                    <span className="text-2xl font-heading font-bold text-dark-400 whitespace-nowrap">
                       {skill.name}
                     </span>
                   </div>
@@ -122,8 +122,8 @@ export default function Skills() {
                     onMouseLeave={(e) => e.currentTarget.style.color = ""}
                   />
                 )}
-                <p className="text-sm text-dark-300 font-medium">{skill.name}</p>
-                <p className="text-[10px] text-dark-600 mt-1 uppercase tracking-wider">{skill.category}</p>
+                <p className="text-sm text-dark-100 font-medium">{skill.name}</p>
+                <p className="text-[10px] text-dark-400 mt-1 uppercase tracking-wider">{skill.category}</p>
 
                 {/* Skill bar */}
                 <div className="mt-3 h-1 rounded-full bg-dark-700/40 overflow-hidden">

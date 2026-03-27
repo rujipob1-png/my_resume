@@ -49,12 +49,12 @@ export default function About() {
             animate={anim}
             className={`md:col-span-2 lg:col-span-6 ${bentoCard} flex flex-col justify-center`}
           >
-            <p className="text-[11px] text-dark-500 uppercase tracking-[0.2em] font-mono mb-4">Introduction</p>
+            <p className="text-[11px] text-accent-400 uppercase tracking-[0.2em] font-mono mb-4">Introduction</p>
             <h3 className="text-xl sm:text-2xl font-bold text-white font-heading leading-snug mb-4">
               Hi , I'm {personalInfo.nameEn.split(" ")[0]} — a{" "}
               <span className="gradient-text">Frontend Developer</span>
             </h3>
-            <p className="text-sm text-dark-400 leading-relaxed">
+            <p className="text-sm text-dark-200 leading-relaxed">
               {aboutData.description}
             </p>
           </motion.div>
@@ -68,12 +68,12 @@ export default function About() {
           >
             {/* Location */}
             <div>
-              <p className="text-[11px] text-dark-500 uppercase tracking-[0.2em] font-mono mb-3">Location</p>
+              <p className="text-[11px] text-accent-400 uppercase tracking-[0.2em] font-mono mb-3">Location</p>
               <div className="flex items-center gap-2.5">
                 <FiMapPin className="w-4 h-4 text-accent-400 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-white">Bangkok, Thailand</p>
-                  <p className="text-[11px] text-dark-500 mt-0.5">GMT+7</p>
+                  <p className="text-[11px] text-dark-300 mt-0.5">GMT+7</p>
                 </div>
               </div>
             </div>
@@ -115,22 +115,22 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* GPA */}
           <motion.div variants={card(0.25)} initial="hidden" animate={anim} className={bentoCard}>
-            <div className="text-[11px] text-dark-500 uppercase tracking-[0.12em] mb-2">GPA</div>
+            <div className="text-[11px] text-accent-400 uppercase tracking-[0.12em] mb-2">GPA</div>
             <div className="text-3xl font-bold text-white font-heading">{aboutData.gpa}</div>
-            <div className="text-xs text-dark-400 mt-1">Information Technology — Kasetsart University</div>
+            <div className="text-xs text-dark-200 mt-1">Information Technology — Kasetsart University</div>
           </motion.div>
 
           {/* Languages */}
           <motion.div variants={card(0.3)} initial="hidden" animate={anim} className={bentoCard}>
             <div className="flex items-center gap-2 mb-4">
-              <FiGlobe className="w-3.5 h-3.5 text-dark-500" />
-              <span className="text-[11px] text-dark-500 uppercase tracking-[0.12em]">Languages</span>
+              <FiGlobe className="w-3.5 h-3.5 text-accent-400" />
+              <span className="text-[11px] text-accent-400 uppercase tracking-[0.12em]">Languages</span>
             </div>
             <div className="space-y-3">
               {aboutData.languages.map((lang, i) => (
                 <div key={i} className="flex items-center justify-between">
                   <span className="text-sm text-white font-medium">{lang.name}</span>
-                  <span className="text-xs text-dark-400 font-mono">{lang.level}</span>
+                  <span className="text-xs text-dark-200 font-mono">{lang.level}</span>
                 </div>
               ))}
             </div>
@@ -138,12 +138,12 @@ export default function About() {
 
           {/* Soft Skills */}
           <motion.div variants={card(0.35)} initial="hidden" animate={anim} className={`sm:col-span-2 lg:col-span-1 ${bentoCard}`}>
-            <div className="text-[11px] text-dark-500 uppercase tracking-[0.12em] mb-4">Soft Skills</div>
+            <div className="text-[11px] text-accent-400 uppercase tracking-[0.12em] mb-4">Soft Skills</div>
             <div className="flex flex-wrap gap-2">
               {aboutData.softSkills.map((skill, i) => (
                 <span
                   key={i}
-                  className="text-xs px-3 py-1.5 rounded-full bg-dark-700/40 text-dark-300 border border-dark-600/20"
+                  className="text-xs px-3 py-1.5 rounded-full bg-dark-700/40 text-dark-100 border border-dark-600/20"
                 >
                   {skill}
                 </span>

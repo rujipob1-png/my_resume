@@ -10,7 +10,7 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-dark-500 text-[13px] flex items-center gap-1 tracking-wide"
+          className="text-dark-300 text-[13px] flex items-center gap-1 tracking-wide"
         >
           © {new Date().getFullYear()} {personalInfo.nameEn}. 
         </motion.p>
@@ -33,7 +33,7 @@ export default function Footer() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-dark-500 hover:text-primary-400 transition-colors duration-300"
+                className="text-dark-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Icon className="w-4 h-4" />
               </a>
