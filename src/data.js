@@ -25,7 +25,7 @@ export const personalInfo = {
 
 export const aboutData = {
   description:
-    "นักศึกษา IT จากมหาวิทยาลัยเกษตรศาสตร์ ที่มีความสนใจด้านการพัฒนา Frontend และเทคโนโลยีเว็บสมัยใหม่ มีทักษะในการสร้างแอปพลิเคชันแบบ responsive ด้วย framework ยุคใหม่ สามารถทำงานร่วมกับทีมได้ดี และมุ่งมั่นในการเรียนรู้และพัฒนาตนเองอย่างต่อเนื่อง",
+    "An IT student from Kasetsart University with an interest in frontend development and modern web technologies. Skilled in building responsive applications using modern frameworks, able to work well in a team, and committed to continuous learning and self-improvement.",
   gpa: "3.02",
   languages: [
     { name: "ไทย", level: "Native" },
