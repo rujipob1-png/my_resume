@@ -13,7 +13,7 @@ export const personalInfo = {
   email: "rujipob1@gmail.com",
   phone: "+66 81-167-5573",
   location: "Thalingchan, Bangkok, Thailand",
-  bio: "IT student passionate about frontend development and modern web technologies. Skilled in building responsive applications using modern frameworks and collaborating effectively in teams with a strong growth mindset.",
+  bio: "IT student passionate about full-stack development and modern web technologies. Skilled in building responsive applications using modern frameworks and collaborating effectively in teams with a strong growth mindset.",
   resumeUrl: "/Resume.pdf",
   social: {
     github: "https://github.com/",
@@ -25,7 +25,7 @@ export const personalInfo = {
 
 export const aboutData = {
   description:
-    "An IT student from Kasetsart University with an interest in frontend development and modern web technologies. Skilled in building responsive applications using modern frameworks, able to work well in a team, and committed to continuous learning and self-improvement.",
+    "An IT student from Kasetsart University with an interest in full-stack development and modern web technologies. Skilled in building responsive applications using modern frameworks, able to work well in a team, and committed to continuous learning and self-improvement.",
   gpa: "3.02",
   languages: [
     { name: "ไทย", level: "Native" },

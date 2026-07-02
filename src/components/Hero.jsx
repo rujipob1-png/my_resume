@@ -33,7 +33,7 @@ export default function Hero() {
           variants={fadeUp(0.12)}
           className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold font-heading leading-[0.9] tracking-tight text-white mb-2"
         >
-          FRONTEND
+          FULL STACK
         </motion.h1>
 
         {/* Big title — outline italic */}
