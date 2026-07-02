@@ -52,7 +52,7 @@ export default function About() {
             <p className="text-[11px] text-accent-400 uppercase tracking-[0.2em] font-mono mb-4">Introduction</p>
             <h3 className="text-xl sm:text-2xl font-bold text-white font-heading leading-snug mb-4">
               Hi , I'm {personalInfo.nameEn.split(" ")[0]} — a{" "}
-              <span className="gradient-text">Frontend Developer</span>
+              <span className="gradient-text">Full Stack Developer</span>
             </h3>
             <p className="text-sm text-dark-200 leading-relaxed">
               {aboutData.description}
